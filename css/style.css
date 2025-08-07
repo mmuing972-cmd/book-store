@@ -22,8 +22,9 @@ body {
 header {
     background-color: var(--primary-color);
     color: var(--light-color);
-    padding: 2.5rem 0;
+    padding: 1.5rem 0;
     text-align: center;
+    position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
@@ -32,18 +33,20 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 nav ul {
     padding: 0;
     list-style: none;
     margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 15px;
+    margin: 10px 0;
 }
 
 nav a {
@@ -51,41 +54,44 @@ nav a {
     text-decoration: none;
     font-size: 1.1rem;
     transition: color 0.3s ease;
+    padding: 5px 15px;
+    border-radius: 5px;
 }
 
 nav a:hover, nav a.active {
     color: var(--secondary-color);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 #hero {
     background-image: url('../images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    /* height: 60vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: var(--light-color);
+    padding: 4rem 2rem;
 }
 
 .hero-content {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 2rem 4rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
     border-radius: var(--border-radius);
 }
 
 .hero-content h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 main {
-    padding: 2rem;
+    padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -93,13 +99,9 @@ main {
 section {
     margin-bottom: 2rem;
     background: var(--light-color);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
-    /* The following lines are commented out to ensure visibility */
-    /* opacity: 0; */
-    /* transform: translateY(30px); */
-    /* transition: opacity 0.8s ease-out, transform 0.8s ease-out, box-shadow 0.3s ease-in-out; */
 }
 
 section.visible {
@@ -112,10 +114,11 @@ section h2 {
     border-bottom: 2px solid var(--secondary-color);
     padding-bottom: 0.5rem;
     margin-bottom: 1.5rem;
+    font-size: 1.8rem;
 }
 
 #map {
-    height: 450px;
+    height: 350px;
     width: 100%;
     border-radius: var(--border-radius);
     border: 1px solid #ddd;
@@ -123,7 +126,7 @@ section h2 {
 
 .rare-books-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -143,9 +146,9 @@ section h2 {
 
 .book-card img {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
-    background-color: #ccc; /* Placeholder color */
+    background-color: #ccc;
 }
 
 .book-card h3 {
@@ -158,23 +161,17 @@ section h2 {
     padding: 0 1rem 1rem 1rem;
 }
 
-
-
-
 .contact-container {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.contact-form {
-    flex: 2;
-    min-width: 300px;
+.contact-form, .contact-info {
+    width: 100%;
 }
 
 .contact-info {
-    flex: 1;
-    min-width: 250px;
     background: #f9f9f9;
     padding: 1.5rem;
     border-radius: var(--border-radius);
@@ -208,6 +205,7 @@ form button {
     cursor: pointer;
     font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 form button:hover {
@@ -216,7 +214,7 @@ form button:hover {
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1.5rem;
     background: var(--primary-color);
     color: var(--light-color);
 }
@@ -224,24 +222,23 @@ footer {
 #scrollTopBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 15px;
+    right: 15px;
     z-index: 99;
     border: none;
     outline: none;
     background-color: var(--secondary-color);
     color: white;
     cursor: pointer;
-    padding: 15px;
-    border-radius: 10px;
-    font-size: 18px;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 16px;
 }
 
 #scrollTopBtn:hover {
     background-color: #2980b9;
 }
 
-/* Modal styles */
 .modal {
     display: none; 
     position: fixed; 
@@ -251,27 +248,27 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto; 
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.8);
 }
 
 .modal-content {
     background-color: #fefefe;
-    margin: 10% auto; 
-    padding: 30px;
+    margin: 20% auto; 
+    padding: 20px;
     border: 1px solid #888;
-    width: 60%; 
-    max-width: 700px;
+    width: 90%; 
+    max-width: 500px;
     border-radius: var(--border-radius);
     position: relative;
-    animation: fadeIn 0.5s;
+    animation: fadeIn 0.4s;
 }
 
 .close-button {
     color: #aaa;
     position: absolute;
-    top: 10px;
-    left: 25px;
-    font-size: 28px;
+    top: 5px;
+    left: 15px;
+    font-size: 24px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -283,27 +280,26 @@ footer {
 
 #modalBookImage {
     width: 100%;
-    height: 250px;
+    height: auto;
     object-fit: cover;
     border-radius: var(--border-radius);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 @keyframes fadeIn {
-    from {opacity: 0; transform: scale(0.9);}
+    from {opacity: 0; transform: scale(0.95);}
     to {opacity: 1; transform: scale(1);}
 }
 
-/* Gallery Styles */
 .gallery-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
 }
 
 .gallery-item img {
     width: 100%;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: var(--border-radius);
     box-shadow: var(--box-shadow);
@@ -316,22 +312,21 @@ footer {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-/* Books Page Styles */
 .books-page-header {
-    background-color: #8e44ad; /* Purple color */
+    background-color: #8e44ad;
     color: white;
     text-align: center;
-    padding: 2rem 0;
+    padding: 2rem 1rem;
 }
 
 .books-page-header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .books-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 books per row */
+    grid-template-columns: 1fr;
     gap: 1.5rem;
 }
 
@@ -345,13 +340,13 @@ footer {
 }
 
 .book-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 .book-item img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 1rem;
@@ -370,13 +365,62 @@ footer {
 .book-item button {
     background: var(--secondary-color);
     color: var(--light-color);
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
     border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
 }
 
 .book-item button:hover {
     background: #2980b9;
+}
+
+/* Desktop Styles */
+@media (min-width: 768px) {
+    header {
+        padding: 2.5rem 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    .rare-books-container {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+    .contact-container {
+        flex-direction: row;
+    }
+
+    .modal-content {
+        margin: 10% auto;
+        width: 60%;
+    }
+
+    .books-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
