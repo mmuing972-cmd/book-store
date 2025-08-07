@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتبة الجاحظ</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>مكتبة الجاحظ</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">عن المكتبة</a></li>
+                <li><a href="#branches">فروعنا</a></li>
+                <li><a href="#hours">أوقات الدوام</a></li>
+                <li><a href="#rare-books">كتب نادرة</a></li>
+                <li><a href="books.html">مجموعة كتبنا</a></li>
+                <li><a href="#gallery">صور من المكتبة</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+                <li><a href="#order">اطلب كتابك</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- 
+    <section id="hero">
+        <div class="hero-content">
+            <h2>أهلاً بك في عالم المعرفة</h2>
+            <p>اكتشف كنوز الفكر والثقافة في مكتبة الجاحظ</p>
+        </div>
+    </section> -->
+
+    <main>
+        <div style="text-align: center; padding: 2rem; background-color: #3498db; margin-bottom: 2rem; border-radius: 8px;">
+            <a href="books.html" style="color: white; font-size: 1.5rem; text-decoration: none; font-weight: bold; padding: 1rem 2rem; border: 2px solid white; border-radius: 8px;">اضغط هنا للانتقال إلى مجموعة كتبنا</a>
+        </div>
+        <section id="about">
+    <h1>عن المكتبة ارث من المعرفة</h1>
+            <p>
+ 
+                <h2>
+خزانة الجاحظ في وسط عمّان ليست مجرد رفوف كتب، بل حكاية عمرها مئة عام تنبض بالثقافة والتراث.
+بين جدرانها تتعانق المخطوطات النادرة مع روايات الحاضر، وتُفتح أبواب المعرفة لكل زائر بلا مقابل، لتبقى منارةً للقرّاء وعشّاق الكلمة في كل زمن.
+إنها مكان يجمع عبق الماضي وشغف الحاضر، حيث تصبح القراءة رحلة لا تنتهي.
+
+
+ 
+</h2>
+
+            </p>
+        </section>
+
+        <section id="branches">
+            <h2>فروعنا: أقرب إليك دائماً</h2>
+            <p>تنتشر فروعنا في عدة مناطق حيوية لنكون على مقربة من جميع قرائنا. استخدم الخريطة التفاعلية أدناه لمعرفة أقرب فرع إليك والحصول على الاتجاهات.</p>
+            <div id="map"></div>
+        </section>
+
+        <section id="hours">
+            <h2>أوقات الدوام</h2>
+            <p>
+                نسعد باستقبالكم في جميع فروعنا طوال أيام الأسبوع.
+                <ul>
+                    <li><strong>السبت - الخميس:</strong> من الساعة 9:00 صباحاً حتى 10:00 مساءً.</li>
+                    <li><strong>الجمعة:</strong> من الساعة 4:00 عصراً حتى 10:00 مساءً.</li>
+                    <li><strong>المناسبات الخاصة والأعياد:</strong> يتم الإعلان عن أوقات الدوام الخاصة عبر صفحاتنا على مواقع التواصل الاجتماعي.</li>
+                </ul>
+            </p>
+        </section>
+
+        <section id="rare-books">
+            <h2>كنوزنا: كتب نادرة ومخطوطات</h2>
+            <p>نفخر باحتوائنا على قسم خاص يضم مجموعة من أندر الكتب والمخطوطات التي تمثل كنوزاً حقيقية للباحثين وهواة الجمع. إليك عينة من مقتنياتنا:</p>
+            <div class="rare-books-container">
+                <div class="book-card" data-description="طبعة نادرة جداً من كتاب الجاحظ الشهير، طُبعت في القاهرة عام 1885. تتميز هذه النسخة بورقها الفاخر وحبرها الذي لا يزال محتفظاً برونقه. تعتبر مرجعاً أساسياً في علم البلاغة والبيان.">
+                    
+                    <h3>"البيان والتبيين" للجاحظ</h3>
+                    <p>طبعة القاهرة، 1885</p>
+                </div>
+                <div class="book-card" data-description="نسخة مخطوطة بخط يد نسّاخ محترف من القرن السابع عشر. تحتوي المقدمة على هوامش وتعليقات يُعتقد أنها أُضيفت من قبل أحد العلماء في تلك الفترة، مما يضيف قيمة تاريخية وعلمية كبيرة للنسخة.">
+                 
+                    <h3>"مقدمة ابن خلدون"</h3>
+                    <p>نسخة مخطوطة من القرن الـ 17</p>
+                </div>
+                <div class="book-card" data-description="إحدى الطبعات الأولى لرسالة الغفران، طُبعت في بيروت وتتميز بغلافها الجلدي الأصلي. هذه النسخة تحتوي على فصول لم يتم تضمينها في الطبعات الحديثة، مما يجعلها قطعة فريدة للدراسة والمقارنة.">
+                    
+                    <h3>"رسالة الغفران" للمعري</h3>
+                    <p>طبعة بيروت الأولى</p>
+                </div>
+                
+            </div>
+            
+        </section>
+
+        <section id="gallery">
+            <h2>صور من المكتبة</h2>
+            <p>جولة بصرية في أروقة مكتبتنا، حيث يلتقي التاريخ بالحاضر، وتتجسد المعرفة في كل زاوية.</p>
+            <div class="gallery-container">
+                <div class="gallery-item"><img src="photo1704557307-3-1704786853.webp" alt=></div>
+                <div class="gallery-item"><img src="images (1).jpeg" alt=""></div>
+                <div class="gallery-item"><img src="images.jpeg" alt=""></div>
+            
+            </div>
+        </section>
+
+        <div id="bookModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <img id="modalBookImage" src="" alt="غلاف كتاب">
+                <h2 id="modalBookTitle"></h2>
+                <p id="modalBookDescription"></p>
+            </div>
+        </div>
+
+        <section id="contact">
+            <h2>تواصل معنا</h2>
+            <p>لأية استفسارات، اقتراحات، أو ملاحظات، لا تترددوا في التواصل معنا. فريقنا جاهز للرد على جميع رسائلكم. يمكنكم أيضاً زيارتنا في أي من فروعنا.</p>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="الاسم" required>
+                        <input type="email" placeholder="البريد الإلكتروني" required>
+                        <textarea placeholder="رسالتك" rows="5" required></textarea>
+                        <button type="submit">إرسال</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <h3>معلومات التواصل</h3>
+                    <p><strong><a href="tel:962795555555">اتصل بنا </a></strong></p>
+                    <p><strong><a href="https://wa.me/962795555555">تواصل واتساب</a></strong></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="order">
+            <h2>اطلب كتابك</h2>
+            <p>هل تبحث عن كتاب معين ولم تجده في فروعنا؟ املأ النموذج أدناه، وسيقوم فريقنا بالبحث عنه في شبكة موردينا الواسعة في الداخل والخارج. سنتواصل معك فور توفره لإعلامك بالتفاصيل والسعر.</p>
+            <form>
+                <input type="text" placeholder="اسم الكتاب" required>
+                <input type="text" placeholder="اسم المؤلف">
+                <button type="submit">طلب</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 مكتبة الجاحظ</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+    <button id="scrollTopBtn" title="العودة للأعلى">&#8593;</button>
+</body>
+</html>س
+س
